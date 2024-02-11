@@ -8,7 +8,7 @@ function arrayReplace(inputArray, replaceElement, subtractionElement) {
             inputArray[index] = subtractionElement
         }
     })
-    
+
     console.log("output array: ", inputArray)
 
 
@@ -20,15 +20,13 @@ arrayReplace([1, 2, 1], 1, 3)
 
 function replacedArrayWay2(inputArray, replaceValue, subtractionValue) {
     let length = inputArray.length
-    for(let i = 0; i<length ;i++){
-        if(inputArray[i]===replaceValue){
+    for (let i = 0; i < length; i++) {
+        if (inputArray[i] === replaceValue) {
             inputArray[i] = subtractionValue
         }
     }
 
-    console.log("way 2 output:",inputArray)
-
-
+    console.log("way 2 output:", inputArray)
 
 
 }
