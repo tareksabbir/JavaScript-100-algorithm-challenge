@@ -12,7 +12,6 @@
 
 
 function almostIncreasingSequence(sequence) {
-    let violation = 0
     let arrayLength = sequence.length
     for (let i = 1; i < arrayLength; i++) {
         if (sequence[i] < sequence[i - 1]) {
