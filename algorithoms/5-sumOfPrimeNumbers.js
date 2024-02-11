@@ -30,14 +30,14 @@ function sumOfAllPrime(numbers) {
 
 function isPrime(num) {
     if (num <= 1) return false; // Numbers less than or equal to 1 are not prime
-    
+
     // Check divisibility up to the square root of the number
     for (let i = 2; i <= Math.sqrt(num); i++) {
         if (num % i === 0) {
             return false; // If it's divisible by any number, it's not prime
         }
     }
-    
+
     return true; // If no divisors are found, it's prime
 }
 
@@ -52,6 +52,35 @@ function sumOfAllPrime(numbers) {
 }
 
 //console.log(sumOfAllPrime(977)); 
+
+
+function primeNumber(num) {
+    if (num <= 1) {
+        return false
+    }
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false
+        }
+    }
+    return true
+}
+
+function sumOfPrimeNumbers(num) {
+    let sum = 0
+    for(let i=2; i<num;i++){
+        if (primeNumber(i)) {
+            sum += i
+        }
+       
+    }
+
+    console.log(sum)
+  
+
+}
+
+sumOfPrimeNumbers(10)
 
 
 
