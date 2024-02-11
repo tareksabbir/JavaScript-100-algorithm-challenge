@@ -53,4 +53,4 @@ function almostIncreasingSequence2(sequence) {
 }
 
 
-console.log(almostIncreasingSequence2([1, 3, 2, 1]))
+console.log(almostIncreasingSequence2([1, 1, 2, 3, 4, 5]))
