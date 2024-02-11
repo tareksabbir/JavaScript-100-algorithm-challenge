@@ -8,7 +8,8 @@ function arrayReplace(inputArray, replaceElement, subtractionElement) {
             inputArray[index] = subtractionElement
         }
     })
-    //console.log("output array: ", inputArray)
+    
+    console.log("output array: ", inputArray)
 
 
 }
@@ -25,9 +26,12 @@ function replacedArrayWay2(inputArray, replaceValue, subtractionValue) {
         }
     }
 
-    console.log(inputArray)
+    console.log("way 2 output:",inputArray)
+
+
 
 
 }
 
 replacedArrayWay2([1, 2, 1], 1, 3)
+
