@@ -9,32 +9,13 @@ function rectangularPattern(row, col) {
         }
         stars += '\n'
     }
-    //console.log(stars)
+    console.log(stars)
 
 }
 
 rectangularPattern(5, 5)
 
 //hollow rectangle pattern
-
-function hollowRectangle(row, col) {
-    let stars = ''
-    for (let i = 1; i <= row; i++) {
-        for (let j = 1; j <= col; j++) {
-            if (j == 1 || j == col) {
-                stars += ' * '
-            } else if (i == 1 || i == row) {
-                stars += " * "
-            } else {
-                stars += "   "
-            }
-        }
-        stars += '\n'
-    }
-    //console.log(stars)
-}
-
-hollowRectangle(5, 5)
 
 
 function hollowRectanglePattern(row, col) {
@@ -54,7 +35,7 @@ function hollowRectanglePattern(row, col) {
         }
         stars += "\n"
     }
-    //console.log(stars)
+    console.log(stars)
 
 }
 
@@ -65,7 +46,7 @@ hollowRectanglePattern(5, 5)
 function reversePattern(row) {
     let star = ""
     for (let i = row; i >= 1; i--) {
-        star = star + "*".repeat(i) + "\n"
+        star = star + " * ".repeat(i) + "\n"
     }
     console.log(star)
 }
