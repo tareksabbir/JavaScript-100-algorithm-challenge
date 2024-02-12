@@ -23,10 +23,10 @@ function sumOfAllPrime(numbers) {
 
 
 }
-//console.log(sumOfAllPrime(900))
+console.log(sumOfAllPrime(977))
 
 
-
+// way 2 
 
 function isPrime(num) {
     if (num <= 1) return false; // Numbers less than or equal to 1 are not prime
@@ -51,36 +51,61 @@ function sumOfAllPrime(numbers) {
     return totalSum;
 }
 
-//console.log(sumOfAllPrime(977)); 
+console.log(sumOfAllPrime(977));
 
 
-function primeNumber(num) {
-    if (num <= 1) {
-        return false
+
+// practice 
+
+function sumsOfPrimeNumbers(num) {
+    let sum = 0
+    for (let i = 2; i < num; i++) {
+        for (let j = 2; j < num; j++) {
+            if (i === j) {
+                sum += i
+            }
+            else if (i % j === 0) {
+                break
+            }
+        }
     }
-    for (let i = 2; i <= Math.sqrt(num); i++) {
-        if (num % i === 0) {
+    return sum
+
+}
+
+console.log(sumsOfPrimeNumbers(10))
+
+
+
+
+// practice way 2 
+
+
+function findOutPrime(int) {
+    if (int <= 1) return false
+    
+    for (let i = 2; i <= Math.sqrt(int); i++) {
+        if (int % i === 0) {
             return false
         }
     }
     return true
+
 }
 
-function sumOfPrimeNumbers(num) {
-    let sum = 0
-    for(let i=2; i<num;i++){
-        if (primeNumber(i)) {
-            sum += i
+function totalSumOfPrimeNumber(num) {
+    let totalSum = 0
+    for (let i = 2; i < num; i++) {
+        if (findOutPrime(i)) {
+            totalSum += i
         }
-       
     }
-
-    console.log(sum)
-  
+    console.log('final sum:', totalSum)
 
 }
 
-sumOfPrimeNumbers(10)
+totalSumOfPrimeNumber(10)
+
 
 
 
