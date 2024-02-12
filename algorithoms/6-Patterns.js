@@ -1,8 +1,7 @@
 // rectangle pattern
 
-function rectangularPattern() {
-    let row = 5
-    let col = 5
+function rectangularPattern(row, col) {
+
     let stars = ''
     for (let i = 0; i < row; i++) {
         for (let j = 0; j < col; j++) {
@@ -10,18 +9,15 @@ function rectangularPattern() {
         }
         stars += '\n'
     }
-    console.log(stars)
+    //console.log(stars)
 
 }
 
-rectangularPattern()
+rectangularPattern(5, 5)
 
 //hollow rectangle pattern
 
-function hollowRectangle() {
-
-    let row = 5
-    let col = 5
+function hollowRectangle(row, col) {
     let stars = ''
     for (let i = 1; i <= row; i++) {
         for (let j = 1; j <= col; j++) {
@@ -38,12 +34,11 @@ function hollowRectangle() {
     //console.log(stars)
 }
 
-hollowRectangle()
+hollowRectangle(5, 5)
 
 
-function hollowRectanglePattern() {
-    let row = 5
-    let col = 5
+function hollowRectanglePattern(row, col) {
+
     let stars = ''
     for (let i = 0; i < row; i++) {
         for (let j = 0; j < col; j++) {
@@ -59,11 +54,23 @@ function hollowRectanglePattern() {
         }
         stars += "\n"
     }
-    console.log(stars)
+    //console.log(stars)
 
 }
 
-hollowRectanglePattern()
+hollowRectanglePattern(5, 5)
+
+// inverted half pyramid
+
+function reversePattern(row) {
+    let star = ""
+    for (let i = row; i >= 1; i--) {
+        star = star + "*".repeat(i) + "\n"
+    }
+    console.log(star)
+}
+
+reversePattern(5)
 
 
 
