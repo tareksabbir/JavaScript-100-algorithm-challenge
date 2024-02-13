@@ -33,22 +33,23 @@ function palindromeCheck(numbers) {
 
 // way 3 not using string 
 
-let isPalindrome = function (x) {
-    if (x < 0 || x % 10 == 0 && x != 0) {
+
+function reverseNumberCheckIsPalindrome(num) {
+    if (num < 0 || num % 10 == 0 && num != 0) {
         return false
     }
-    let rev = 0
-    while (x > rev) {
-        rev = rev * 10 + x % 10
-        x = Math.floor(x / 10)
+
+    let reverse = 0
+    while (num > reverse) {
+        reverse = reverse * 10 + num % 10
+        num = Math.floor(num / 10)
     }
-    return (rev == x || x == (Math.floor(rev / 10)))
+    return ( reverse== num|| num == Math.floor(reverse/10))
+
 }
 
-//console.log(isPalindrome(0))
-
-
-
+let result = reverseNumberCheckIsPalindrome(9)
+console.log(result)
 
 
 
@@ -80,4 +81,4 @@ function reverseNumber(num) {
 
 }
 
-console.log(reverseNumber(12345))
+//console.log(reverseNumber(12345))
