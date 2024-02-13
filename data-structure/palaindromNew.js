@@ -27,10 +27,10 @@ function newPalindrome2(string) {
     let newPalindromes = string.split("").reverse().join("")
     console.log(newPalindromes === string)
 
-    let newPalindromes4 = string.split("").every((value,index)=>{
-        return value === string[string.length-1-index]
+    let newPalindromes4 = string.split("").every((value, index) => {
+        return value === string[string.length - 1 - index]
     })
-    console.log("it is ",newPalindromes4)
+    console.log("it is ", newPalindromes4)
 
 }
 
