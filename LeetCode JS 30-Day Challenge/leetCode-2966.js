@@ -16,40 +16,24 @@
 // Explanation: It is not possible to divide the array satisfying all the conditions.
 
 
-function groupNumbers(nums, k) {
-    // Sort the array to group similar numbers together
-    nums.sort((a, b) => a - b);
-  
-    const result = [];
-    let currentGroup = [];
-  
-    for (let num of nums) {
-      // Check if current group can accommodate another number with <= k difference
-      if (currentGroup.length < 3 && (currentGroup.length === 0 || num - currentGroup[currentGroup.length - 1] <= k)) {
-        currentGroup.push(num);
-      } else {
-        // Push the filled group and start a new one
-        result.push(currentGroup);
-        currentGroup = [num];
+function group(nums, k) {
+    nums.sort();
+    const res = [];
+    let i = 0;
+    while (i < nums.length) {
+      let j = i + 1;
+      while (j < nums.length && nums[j] - nums[i] <= k) {
+        j++;
       }
+      if (j - i >= 3) {
+        res.push(nums[i,j]);
+      }
+      i = j;
     }
-  
-    // Push the last group if it's not empty
-    if (currentGroup.length > 0) {
-      result.push(currentGroup);
-    }
-  
-    return result;
+    return res;
   }
   
-  // Example usage
-  const nums1 = [1, 3, 4, 8, 7, 9, 3, 5, 1];
-  const k1 = 2;
-  const result1 = groupNumbers(nums1, k1);
-  console.log(result1); // Output: [[1, 1, 3], [3, 4, 5], [7, 8, 9]]
-  
-  const nums2 = [1, 3, 3, 2, 7, 3];
-  const k2 = 3;
-  const result2 = groupNumbers(nums2, k2);
-  console.log(result2); // Output: []
+  const nums = [1, 3, 4, 8, 7, 9, 3, 5, 1];
+  const k = 2;
+  console.log(group(nums, k));
   
