@@ -31,19 +31,38 @@
 
 // NB: here we use greedy algorithm and prefix sum 
 var largestPerimeter = function (nums) {
-        let sorted = nums.sort((a, b) => a - b)
-        let preSum = sorted[0] + sorted[1]
-        let sum = 0
-        for (let i = 2; i < sorted.length; i++) {
-            if (preSum > sorted[i]) {
-                sum = preSum + sorted[i]
-            }
-            preSum += sorted[i]
+    let sorted = nums.sort((a, b) => a - b)
+    let preSum = sorted[0] + sorted[1]
+    let sum = 0
+    for (let i = 2; i < sorted.length; i++) {
+        if (preSum > sorted[i]) {
+            sum = preSum + sorted[i]
         }
+        preSum += sorted[i]
+    }
 
-        return (sum === 0) ? -1 : sum
+    return (sum === 0) ? -1 : sum
 
-   
+
 };
 
-console.log(largestPerimeter([1,12,1,2,5,50,3]))
+console.log(largestPerimeter([1, 12, 1, 2, 5, 50, 3]))
+
+
+
+function polygon2(nums) {
+    let sorted = nums.sort((a, b) => a - b)
+    let preFixSum = sorted[0] + sorted[1]
+    let sum = 0
+    for (let i = 2; i < sorted.length; i++) {
+        if (preFixSum > sorted[i]) {
+            sum = preFixSum + sorted[i]
+        }
+        preFixSum += sorted[i]
+    }
+    return (sum === 0) ? -1 : sum
+
+
+}
+
+console.log(polygon2([5,5,5]))
