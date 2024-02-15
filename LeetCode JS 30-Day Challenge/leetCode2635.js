@@ -26,9 +26,17 @@
 
 
 var map = function (arr, fn) {
-
     return arr.map(fn)
 };
 
 let mapping = map([1, 2, 3], fn = function plusI(n, i) { return n + i; })
 console.log(mapping)
+
+
+
+// reduce 
+var reduce = function (nums, fn, init) {
+    return nums.reduce(fn, init)
+};
+
+reduce()
