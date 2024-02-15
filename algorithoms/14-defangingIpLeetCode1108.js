@@ -17,11 +17,11 @@
 var defangIPaddr = function (address) {
     let newIp = ''
     let str = address.split(".")
-    let length=str.length
-    for (let i=0;i<length;i++) {
+    let length = str.length
+    for (let i = 0; i < length; i++) {
         newIp = newIp + str[i] + "[.]"
     }
-    return newIp.slice(0,newIp.length-3)
+    return newIp.slice(0, newIp.length - 3)
 
 
 };
