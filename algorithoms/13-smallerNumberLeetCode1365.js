@@ -35,7 +35,7 @@ var smallerNumbersThanCurrent = function (nums) {
         }
         arr[i] = count
     }
-    console.log(arr)
+    return arr
 };
 
 
