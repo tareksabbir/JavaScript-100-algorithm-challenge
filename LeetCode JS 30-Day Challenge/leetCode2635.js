@@ -35,8 +35,21 @@ console.log(mapping)
 
 
 // reduce 
-var reduce = function (nums, fn, init) {
-    return nums.reduce(fn, init)
-};
+// var reduce = function (nums, fn, init) {
+//     return nums.reduce(fn, init)
+// };
 
-reduce()
+// reduce()
+
+
+
+
+
+
+var argumentsLength = function(...args) {
+    
+    console.log(args)
+   
+ };
+
+ argumentsLength(1, 2, 3)
