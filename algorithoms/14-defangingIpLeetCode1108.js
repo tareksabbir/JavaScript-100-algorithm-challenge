@@ -21,7 +21,7 @@ var defangIPaddr = function (address) {
     for (let i = 0; i < length; i++) {
         newIp = newIp + str[i] + "[.]"
     }
-    return newIp.slice(0, newIp.length - 3)
+    console.log(newIp.slice(0, newIp.length - 3))
 
 
 };
