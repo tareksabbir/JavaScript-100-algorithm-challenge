@@ -1,11 +1,11 @@
 // find out the smallest and biggest number
 
 function minMax(arr) {
-    let minMaxArray = []
+
     let min = Math.min(...arr)
     let max = Math.max(...arr)
-
-    minMaxArray.push(min, max)
+    let minMaxArray = [min, max]
+    // minMaxArray.push(min, max)
     console.log(minMaxArray)
 
 
