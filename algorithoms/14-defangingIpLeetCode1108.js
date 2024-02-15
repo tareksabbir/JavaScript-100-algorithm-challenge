@@ -30,19 +30,3 @@ defangIPaddr("255.100.50.0")
 //way 2
 
 
-var defangIPaddr2 = function (address) {
-   
-    let str = address.split(".")
-    let length= str.length
-    for (let i=0;i<length;i++) {
-        if(str[i]==='.'){
-            str[i]='[.]'
-        }
-        
-    }
-    console.log(str)
-    
-
-
-};
-defangIPaddr2("255.100.50.0")
