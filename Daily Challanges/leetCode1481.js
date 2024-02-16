@@ -47,11 +47,11 @@ var findLeastNumOfUniqueInts = function (arr, k) {
     })
     let sorted = Array.from(frequency.entries()).sort((a, b) => a[1] - b[1])
     let uniqueCunt = sorted.length
-    for(let [num,frequency] of sorted){
-        if(k>=frequency){
-            k-=frequency
+    for (let [num, frequency] of sorted) {
+        if (k >= frequency) {
+            k -= frequency
             uniqueCunt--
-        }else{
+        } else {
             break
         }
     }
@@ -61,8 +61,35 @@ var findLeastNumOfUniqueInts = function (arr, k) {
 };
 
 
-let result=  findLeastNumOfUniqueInts([4, 3, 1, 1, 3, 3, 2], 3)
+let result = findLeastNumOfUniqueInts([4, 3, 1, 1, 3, 3, 2], 3)
 
-console.log(result)
+//console.log(result)
 
+
+
+
+
+function hashMapPractice(arr,k) {
+    let mapObject = new Map()
+    arr.forEach(num => {
+        mapObject.set(num, mapObject.get(num) + 1 || 1)
+    })
+
+    let sorting = Array.from(mapObject.values()).sort((a, b) => a - b)
+    let sortLength = sorting.length
+    for (let num of sorting) {
+        if (k >= num) {
+            k -= num
+            sortLength--
+        } else {
+            return sortLength
+        }
+    }
+    return sortLength
+
+
+}
+
+let hash= hashMapPractice([4, 3, 1, 1, 3, 3, 2], 1)
+console.log(hash)
 
