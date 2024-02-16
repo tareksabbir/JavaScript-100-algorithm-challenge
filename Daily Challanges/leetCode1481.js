@@ -90,6 +90,6 @@ function hashMapPractice(arr,k) {
 
 }
 
-let hash= hashMapPractice([4, 3, 1, 1, 3, 3, 2], 1)
+let hash= hashMapPractice([4, 3, 1, 1, 3, 3, 2], 3)
 console.log(hash)
 
