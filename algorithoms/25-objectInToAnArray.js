@@ -14,7 +14,7 @@ function objectToAnArray(obj) {
 const genderObjs = {
     "-3": { m: "great grandFather", f: "great grandmother" },
     "-2": { m: "grandFather", f: "grandmother" },
-    "-1": { m: "Father", f: "Mother" },
+    "-1": null,
     "0": { m: "me", f: "me" },
     "1": { m: "son", f: "daughter" },
     "2": { m: "grand son", f: "grand daughter" },
