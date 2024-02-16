@@ -47,3 +47,24 @@ async function sleep3(millis) {
 
 
 sleep3()
+
+// clear set time out 
+var cancellable = function(fn, args, t) {
+    const cancelFn = () => clearTimeout(timeout);
+    const timeout = setTimeout(() =>
+        fn(...args)
+    , t)
+    
+    return cancelFn;
+
+};
+
+// clear set interval
+var cancellable = function(fn, args, t) {
+    const clearInt =()=>clearInterval(interval)
+    const interval= setInterval(()=>{
+        fn(...args)
+    },t)
+    return clearInt
+    
+};
