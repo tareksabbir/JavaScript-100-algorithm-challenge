@@ -9,6 +9,9 @@ If the current building's height is greater than or equal to the next building's
 If the current building's height is less than the next building's height, you can either use one ladder or (h[i+1] - h[i]) bricks.
 Return the furthest building index (0-indexed) you can reach if you use the given ladders and bricks optimally.
 
+
+Min heap algorithm and priority queue in data structure which is used here .
+
 */
 
 /**
