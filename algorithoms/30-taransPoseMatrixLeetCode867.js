@@ -38,6 +38,31 @@ var transpose = function (matrix) {
     return array
 };
 
-console.log(transpose([[1, 2, 3], [1, 2, 3], [4, 5, 6],[1, 2, 3], [4, 5, 6]]))
+//console.log(transpose([[1, 2],  [4, 5],  [5, 6]]))
+
+
+
+
+function transposeMatrix(matrix) {
+    let zeroMatrix = Array.from({ length: matrix[0].length }, () => {
+        return new Array(matrix.length).fill(0)
+    })
+    let len = matrix.length
+    for (let row = 0; row < len; row++) {
+        for (let col = 0; col < matrix[0].length; col++) {
+            if(matrix[row][col] == undefined || null){
+                matrix[row][col]=0
+            }
+            zeroMatrix[col][row] = matrix[row][col]
+        }
+    }
+    return zeroMatrix
+
+
+}
+
+let result = transposeMatrix([[1, 2], [4, 5], [7]])
+
+console.log(result)
 
 
