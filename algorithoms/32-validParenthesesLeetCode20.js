@@ -39,3 +39,45 @@ var isValid = function (s) {
 
 };
 
+// way two
+
+var isValid2 = function (s) {
+    let stack = []
+    let bracketMaps = { '(': ')', '{': '}', '[': ']' }
+    for (const char of s) {
+        if (bracketMaps[char]) {
+            stack.push(char)
+        } else {
+
+            if (bracketMaps[stack.pop()] !== char) {
+                return false;
+            }
+        }
+    }
+    return stack.length === 0;
+};
+
+
+//console.log(isValid("()"))
+
+
+
+
+// PRACTICE MORE 
+
+
+const findValidBrackets = (string) => {
+    let stack = []
+    let brackets = { '(': ')', '{': '}', '[': ']' }
+    for (let char of string) {
+        if (brackets[char]) {
+            stack.push(char)
+        } else if (brackets[stack.pop()] !== char) {
+            return false
+        }
+    }
+    return stack.length === 0
+
+}
+
+console.log(findValidBrackets("[({)()})]")) 
