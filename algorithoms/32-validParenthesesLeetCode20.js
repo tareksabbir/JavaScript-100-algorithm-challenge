@@ -80,4 +80,25 @@ const findValidBrackets = (string) => {
 
 }
 
-console.log(findValidBrackets("[({)()})]")) 
+//console.log(findValidBrackets("[({)()})]"))
+
+
+
+const conceptClear = (string) => {
+    let stack = []
+    let brackets = { '(': ')', '{': '}', '[': ']' }
+    for (let char of string) {
+        if (brackets[char]) {
+            stack.push(char)
+        } else {
+            if (brackets[stack.pop()] !== char) {
+                return false
+            }
+        }
+    }
+    return stack.length === 0
+
+
+}
+
+console.log(conceptClear("([[{}]{({[)]})}])"))
