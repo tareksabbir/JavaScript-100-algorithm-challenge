@@ -55,5 +55,5 @@ finalValueAfterOperations(["--X", "X++", "X++"])
 
 // way 2
 var finalValueAfterOperations2 = function (operations) {
-    return operations.reduce((acc, curr) => curr.includes("--") ? acc - 1 : acc + 1, 0);
+    return operations.reduce((total, value) => value.includes("++") ? total + 1 : total - 1, 0);
 };
