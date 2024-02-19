@@ -45,3 +45,21 @@ var balancedStringSplit = function (s) {
 };
 
 balancedStringSplit("rllrllrrllllrr")
+
+
+// practice 
+
+const balancedStr = (string) => {
+    const str = string.toUpperCase()
+    let count = 0
+    let totalBalanceStrings = 0
+    for (let s of str) {
+        
+        if (s == 'R') { ++count }
+        if (s == 'L') { --count }
+        if (count === 0) { ++totalBalanceStrings }
+    }
+    return totalBalanceStrings
+
+}
+console.log(balancedStr("RLRRRLLRLL"))
