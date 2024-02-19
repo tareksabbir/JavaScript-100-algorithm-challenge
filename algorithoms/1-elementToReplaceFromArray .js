@@ -26,8 +26,7 @@ function replacedArrayWay2(inputArray, replaceValue, subtractionValue) {
         }
     }
 
-    console.log("way 2 output:", inputArray)
-
+    //console.log("way 2 output:", inputArray)
 
 }
 
