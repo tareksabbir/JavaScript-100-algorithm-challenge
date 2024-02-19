@@ -53,6 +53,7 @@ var maximum69Number2 = function (num) {
 
 };
 
-let result2 = maximum69Number2(6999)
-//console.log(result2)
+let result2 = maximum69Number2(66969)
+
+console.log(result2)
 
