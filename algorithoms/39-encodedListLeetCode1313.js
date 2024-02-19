@@ -21,46 +21,52 @@ Output: [1,3,3]
 */
 
 
-var decompressRLElist = function(nums) {
-    let store=[]
-    for(let i=0;i<nums.length;i+=2){
-        for(let j=0;j<nums[i];j++){
-            store.push(nums[i+1])
+var decompressRLElist = function (nums) {
+    let store = []
+    for (let i = 0; i < nums.length; i += 2) {
+        for (let j = 0; j < nums[i]; j++) {
+            store.push(nums[i + 1])
 
         }
     }
     return store
-   
-    
+
+
 };
 
-console.log(decompressRLElist([1,2,3,4]))
+console.log(decompressRLElist([1, 2, 3, 4]))
 
 
-var decompressRLElist2 = function(nums) {
-    let store=[]
-    for(let i=0;i<nums.length;i+=2){
+var decompressRLElist2 = function (nums) {
+    let store = []
+    for (let i = 0; i < nums.length; i += 2) {
         let n = nums[i]
-        while(n--){
-            store.push(nums[i+1])
+        while (n--) {
+            store.push(nums[i + 1])
         }
     }
     return store
 };
 
-console.log(decompressRLElist2([1,2,3,4]))
+console.log(decompressRLElist2([1, 2, 3, 4]))
 
 
+// way 3 
+// what if the numbers of an array has not even properties
 
-var decompressRLElist3 = function(nums) {
-    const res = []
-    for(let i=0; i<nums.length; i=i+2) {
-        const [freq, val] = [nums[i], nums[i+1]]
-        for(let j=0;j<freq;j++) {
-            res.push(val)
+var decompressRLElist3 = function (nums) {
+    let store = []
+    if (nums.length % 2 !== 0) {
+        nums.splice(nums.length - 1, 0, 1)
+    }
+    for (let i = 0; i < nums.length; i += 2) {
+        let [freq, val] = [nums[i], nums[i + 1]]
+        for (let j = 0; j < freq; j++) {
+            store.push(val)
         }
     }
-    return res
+    return store
+
 };
 
-console.log(decompressRLElist3([1,2,3,4]))
+console.log(decompressRLElist3([1, 3, 5, 6, 5]))
