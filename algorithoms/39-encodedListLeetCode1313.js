@@ -48,7 +48,7 @@ var decompressRLElist2 = function (nums) {
     return store
 };
 
-console.log(decompressRLElist2([1, 2, 3, 4]))
+//console.log(decompressRLElist2([1, 2, 3, 4]))
 
 
 // way 3 
@@ -69,4 +69,18 @@ var decompressRLElist3 = function (nums) {
 
 };
 
-console.log(decompressRLElist3([1, 3, 5, 6, 5]))
+//console.log(decompressRLElist3([1, 3, 5, 6, 5]))
+
+// practice 
+const decompress = (num) => {
+    let store = []
+    for (let i = 0; i < num.length; i += 2) {
+        let [count, val] = [num[i],num[i + 1]]
+        for (let j = 0; j < count; j++) {
+            store.push(val)
+        }
+    }
+    return store
+
+}
+console.log(decompress([1, 3, 5, 6, 5, 3, 5, 2]))
