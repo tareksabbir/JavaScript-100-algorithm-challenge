@@ -4,7 +4,7 @@
 
 // way one 
 function sumOfAllParams(...params) {
-    return params.reduce((total, value) => total + value)
+    return params.reduce((total, value) => total + value,0)
 }
 
 let result = sumOfAllParams(1, 2, 3, 4, 5, 6)
