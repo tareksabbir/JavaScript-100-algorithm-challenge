@@ -32,9 +32,9 @@ var countPrefixSuffixPairs = function (words) {
     let n = words.length
     for (let i = 0; i < n; i++) {
         for (let j = i + 1; j < n; j++) {
-            let w1 = words[i]
-            let w2 = words[j]
-            if (w2.startsWith(w1) && w2.endsWith(w1)) {
+            let s = words[i]
+            let t = words[j]
+            if (t.startsWith(s) && t.endsWith(s)) {
                 count = count + 1
             }
         }
@@ -44,3 +44,25 @@ var countPrefixSuffixPairs = function (words) {
 };
 
 countPrefixSuffixPairs(["a", "aba", "ababa", "aa"])
+
+
+// startsWith and endsWith i js built in function 
+const countPrefixSuffixPairs2 = (arr) => {
+    let count = 0
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            let a = arr[i]
+            let b = arr[j]
+            if (b.startsWith(a) && b.endsWith(a)) {
+                ++count
+            }
+            
+        }
+    }
+    console.log(count)
+
+}
+
+
+
+countPrefixSuffixPairs2(["a", "aba", "ababa", "aa"])
