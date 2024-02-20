@@ -26,5 +26,15 @@ function useFilterMethod(data) {
 console.log(useFilterMethod(a))
 
 
-// way3
+// way3 unique array by sets
+
+function useSetMethod(data) {
+    let a=  [...new Set(data)]// set always contain unique value but dose not contain index value so er can convert into an array like this 
+    let c=  a.reduce((total,value)=>total+value,0)
+    return a,c
+}
+console.log(useSetMethod(b))
+
+
+
 
