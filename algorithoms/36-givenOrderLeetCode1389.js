@@ -29,7 +29,7 @@ var createTargetArray = function (nums, index) {
         target.splice(index[i], 0, nums[i])
 
     }
-    console.log(target)
+    console.log(nums)
 
 
 };
