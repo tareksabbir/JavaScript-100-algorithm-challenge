@@ -24,36 +24,36 @@ var MyCircularQueue = function (k) {
 MyCircularQueue.prototype.enQueue = function (value) {
     if (this.queue.length === this.size) return false
     this.queue.push(value)
-
+    return true
 };
 
 
 MyCircularQueue.prototype.deQueue = function () {
-    if(this.isEmpty) return false
+    if (this.queue.length === 0) return false
     this.queue.shift()
-
+    return true
 };
 
 
 MyCircularQueue.prototype.Front = function () {
-    if(this.isEmpty) return false
-    this.queue[0]
+    if (this.queue.length === 0) return -1
+    return this.queue[0]
 
 };
 
 
 MyCircularQueue.prototype.Rear = function () {
-    if(this.isEmpty) return false
-    this.queue[this.queue.length - 1]
+    if (this.queue.length === 0) return -1
+    return this.queue[this.queue.length - 1]
 
 };
 
 
 MyCircularQueue.prototype.isEmpty = function () {
-    this.queue.length === 0
+   return this.queue.length === 0
 };
 
 
 MyCircularQueue.prototype.isFull = function () {
-    this.queue.length === this.size
+   return this.queue.length === this.size
 };
