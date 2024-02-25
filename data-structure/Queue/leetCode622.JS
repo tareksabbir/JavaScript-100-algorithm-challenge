@@ -57,3 +57,25 @@ MyCircularQueue.prototype.isEmpty = function () {
 MyCircularQueue.prototype.isFull = function () {
    return this.queue.length === this.size
 };
+
+
+// MyCircularQueue myCircularQueue = new MyCircularQueue(3);
+// myCircularQueue.enQueue(1); // return True
+// myCircularQueue.enQueue(2); // return True
+// myCircularQueue.enQueue(3); // return True
+// myCircularQueue.enQueue(4); // return False
+// myCircularQueue.Rear();     // return 3
+// myCircularQueue.isFull();   // return True
+// myCircularQueue.deQueue();  // return True
+// myCircularQueue.enQueue(4); // return True
+// myCircularQueue.Rear();     // return 4
+
+
+var obj = new MyCircularQueue(10)
+var param_1 = obj.enQueue(10)
+var param_1 = obj.enQueue(20)
+var param_2 = obj.deQueue()
+var param_3 = obj.Front()
+var param_4 = obj.Rear()
+var param_5 = obj.isEmpty()
+var param_6 = obj.isFull()
