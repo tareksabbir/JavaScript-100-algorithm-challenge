@@ -15,7 +15,7 @@ class Stack {
     pop() {
         console.log(this.item)
         this.item.pop()
-
+        this.count--
     }
 
 }
@@ -26,8 +26,10 @@ stack.push(100)
 stack.push(200)
 stack.push(300)
 stack.push(400)
+console.log(stack.count)
 
 stack.pop()
 stack.pop()
 stack.pop()
 stack.pop()
+console.log(stack.count)
