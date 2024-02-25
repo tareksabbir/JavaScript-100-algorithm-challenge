@@ -32,38 +32,36 @@ myQueue.empty(); // return false
  */
 
 var MyQueue = function () {
-    this.q1 = []
-    this.q2 = []
+    this.s1 = []
+    this.s2 = []
 };
 
 
 MyQueue.prototype.push = function (x) {
-    while (this.q1.length !== 0) {
-        this.q2.push(this.q1.shift())
+    while (this.s1.length !== 0) {
+        this.s2.push(this.s1.shift())
     }
-    this.q1.push(x)
-    while (this.q2.length !== 0) {
-        this.q1.push(this.q2.shift())
+    this.s1.push(x)
+    while (this.s2.length !== 0) {
+        this.s1.push(this.s2.shift())
     }
-    console.log(this.q1)
+    console.log(this.s1)
    
   
 
 };
 
 
-
-
 MyQueue.prototype.pop = function () {
-    return this.q1.pop()
+    return this.s1.pop()
 };
 
 MyQueue.prototype.peek = function () {
-    return this.q1[this.q1.length-1]
+    return this.s1[this.s1.length-1]
 };
 
 MyQueue.prototype.empty = function () {
-    return this.q1.length === 0
+    return this.s1.length === 0
 
 };
 
