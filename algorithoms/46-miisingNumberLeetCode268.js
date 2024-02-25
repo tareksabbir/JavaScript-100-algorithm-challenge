@@ -34,31 +34,41 @@ var missingNumber = function (nums) {
 
 };
 
-console.log(missingNumber([0, 1]))
+//console.log(missingNumber([0, 1]))
 
 
 // way 2
 
-var missingNumber2 = (nums) => { 
-    return (nums.length * (nums.length + 1) / 2) - nums.reduce((a, b) => a + b, 0) 
+var missingNumber2 = (nums) => {
+    return (nums.length * (nums.length + 1) / 2) - nums.reduce((a, b) => a + b, 0)
 
 };
-console.log(missingNumber2([0, 1]))
+//console.log(missingNumber2([0, 1]))
 
 // way 3
 
-var missingNumber3 = function(nums) {
-    nums.sort((a,b)=>a-b)
+var missingNumber3 = function (nums) {
+    nums.sort((a, b) => a - b)
     let len = nums.length
-    for(let i=0;i<len;i++){
-        if(nums[i]===i){
-         continue
-        }else{
+    for (let i = 0; i < len; i++) {
+        if (nums[i] == i) {
+            continue
+        } else {
             return i
         }
     }
     return nums.length
 };
 
-missingNumber3([0,3,2])
+//missingNumber3([0, 3, 2])
 
+
+const missingNumbers = (nums) => {
+    let n = nums.length
+    let arraySum = n * (n + 1) / 2
+    let exSum = nums.reduce((total, value) => total + value, 0)
+    return arraySum - exSum
+
+
+}
+console.log(missingNumbers([0, 1, 2]))
