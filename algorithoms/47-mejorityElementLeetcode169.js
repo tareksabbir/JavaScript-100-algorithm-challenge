@@ -13,4 +13,19 @@ const majorityElement = (nums) => {
     }
 }
 
-console.log(majorityElement([3, 1, 3]))
+//console.log(majorityElement([3, 1, 3]))
+
+
+///way 2
+
+var majorityElement2 = function (nums) {
+    let count = 0, leader;
+    for (let i of nums) {
+        if (count < 1) leader = i;
+        else if (i == leader) count++
+        else count --
+    }
+    return leader
+};
+
+console.log(majorityElement2([3, 1, 3]))
