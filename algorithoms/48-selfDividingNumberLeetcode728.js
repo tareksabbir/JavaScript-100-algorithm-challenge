@@ -27,9 +27,9 @@ self_d(1, 22)
 //way 2
 
 
-var selfDividingNumbers = function(left, right) {
+var selfDividingNumbers = function (left, right) {
     let result = [];
-    for (var i=left; i<=right; i++) {
+    for (var i = left; i <= right; i++) {
         if (isSelfDividing(i)) {
             result.push(i);
         }
@@ -40,12 +40,12 @@ var selfDividingNumbers = function(left, right) {
 function isSelfDividing(num) {
     let str = num.toString();
     let digit;
-    for (var i=0; i<str.length; i++) {
+    for (var i = 0; i < str.length; i++) {
         digit = Number(str[i]);
         if (digit == 0) {
             return false;
         }
-        if (num%digit != 0) {
+        if (num % digit != 0) {
             return false;
         }
     }
@@ -55,33 +55,65 @@ function isSelfDividing(num) {
 
 
 
-selfDividingNumbers(1,22)
+selfDividingNumbers(1, 22)
 
 
 
 // way 3
 
 
-var selfDividingNumbers2 = function(left, right) {
+var selfDividingNumbers2 = function (left, right) {
     let ans = [];
-    for (let i=left;i<=right;i++){
-        if (i<=9){
+    for (let i = left; i <= right; i++) {
+        if (i <= 9) {
             ans.push(i);
         }
-        else{
-            let temp=i;
+        else {
+            let temp = i;
             let sel = true;
-            while (temp>0){
-                if (i%(temp%10)!=0){
+            while (temp > 0) {
+                if (i % (temp % 10) != 0) {
                     sel = false;
                     break;
                 }
-                temp = Math.floor(temp/10);
+                temp = Math.floor(temp / 10);
             }
-            if (sel){
+            if (sel) {
                 ans.push(i);
             }
         }
     }
     return ans;
 };
+
+
+/// practice again 
+
+const self_dPractice = (left, right) => {
+    let res = []
+    for (let i = left; i <= right; i++) {
+        if(i<=9 || i>9 && isSelfDividedNumber(i)) {
+            res.push(i)
+        }
+    }
+    return res
+
+}
+
+const isSelfDividedNumber = (num) => {
+    let str = num.toString()
+    let digit
+    for(let s of str){
+        digit = Number(s)
+        if(digit===0){
+            return false
+        }
+        if(num%digit!==0){
+            return false
+        }
+    }
+    return true
+
+}
+
+console.log(self_dPractice(5, 60))
