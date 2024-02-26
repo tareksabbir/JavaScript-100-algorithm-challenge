@@ -24,3 +24,38 @@ self_d(1, 22)
 
 
 
+//way 2
+
+
+var selfDividingNumbers = function(left, right) {
+    let result = [];
+    for (var i=left; i<=right; i++) {
+        if (isSelfDividing(i)) {
+            result.push(i);
+        }
+    }
+    return result;
+};
+
+function isSelfDividing(num) {
+    let str = num.toString();
+    let digit;
+    for (var i=0; i<str.length; i++) {
+        digit = Number(str[i]);
+        if (digit == 0) {
+            return false;
+        }
+        if (num%digit != 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+
+
+
+selfDividingNumbers(1,22)
+
+
+
