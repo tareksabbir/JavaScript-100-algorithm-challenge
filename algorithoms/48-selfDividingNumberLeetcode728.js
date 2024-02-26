@@ -59,3 +59,29 @@ selfDividingNumbers(1,22)
 
 
 
+// way 3
+
+
+var selfDividingNumbers2 = function(left, right) {
+    let ans = [];
+    for (let i=left;i<=right;i++){
+        if (i<=9){
+            ans.push(i);
+        }
+        else{
+            let temp=i;
+            let sel = true;
+            while (temp>0){
+                if (i%(temp%10)!=0){
+                    sel = false;
+                    break;
+                }
+                temp = Math.floor(temp/10);
+            }
+            if (sel){
+                ans.push(i);
+            }
+        }
+    }
+    return ans;
+};
