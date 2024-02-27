@@ -1,4 +1,4 @@
-// link list 
+//link list 
 
 class Node {
     constructor(data) {
