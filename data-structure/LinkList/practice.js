@@ -26,15 +26,7 @@ class LinkList {
         }
         current.next = newNode
     }
-    size() {
-        let count = 0
-        let current = this.head
-        while (current) {
-            count++
-            current = current.next
-        }
-        return count
-    }
+
     addAtAnyIndex(index, data) {
         if (index < 0 || index > this.size()) {
             console.log('invalid index')
@@ -52,12 +44,42 @@ class LinkList {
         newNode.next = current.next
         current.next = newNode
     }
-    print() {
+
+    removeTopNode() {
+        if (!this.head) {
+            return
+        }
+        this.head = this.head.next
+    }
+    removeEndNode() {
+        if (!this.head) {
+            return
+        }
         let current = this.head
-        while (current) {
-            console.log(current.data)
+        while (current.next.next) {
             current = current.next
         }
+        current.next = null
+    }
+
+    size() {
+        let count = 0
+        let current = this.head
+        while (current) {
+            count++
+            current = current.next
+        }
+        return count
+    }
+    print() {
+        let current = this.head
+        let outPut = []
+        while (current) {
+            outPut.push(current.data)
+            current = current.next
+
+        }
+        return outPut
     }
 }
 
@@ -67,5 +89,12 @@ list1.addNode(20)
 list1.addNode(30)
 list1.addNodeLast(40)
 list1.addAtAnyIndex(2, 50)
-list1.print()
+console.log(list1.print())
+list1.removeEndNode()
+console.log(list1.print())
+list1.removeTopNode()
+console.log(list1.print())
+
+//list1.print()
+
 
