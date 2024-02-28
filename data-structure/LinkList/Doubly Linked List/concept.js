@@ -13,12 +13,5 @@ class DoublyLinkedList{
         this.head = null
     }
 
-    addFirst(data){
-        const newNode = new Node(data)
-        if(this.head){
 
-        }
-        
-
-    }
 }
