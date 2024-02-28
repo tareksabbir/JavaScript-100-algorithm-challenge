@@ -61,6 +61,31 @@ class DoublyLinkedList {
 
     }
 
+    removeFirst() {
+        if (!this.head) {
+            return
+        }
+        this.head = this.head.next
+        if (this.head) {
+            this.head.prev = null
+        }
+    }
+
+    removeLast() {
+        if (!this.head) {
+            return
+        }
+        if (!this.head.next) {
+            this.head = null
+            return
+        }
+        let current = this.head
+        while (current.next) {
+            current = current.next
+        }
+        current.prev.next = null
+    }
+
     size() {
         let count = 0
         let current = this.head
