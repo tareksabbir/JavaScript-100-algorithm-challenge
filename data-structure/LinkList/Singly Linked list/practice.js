@@ -30,6 +30,7 @@ class LinkList {
     addAtAnyIndex(index, data) {
         if (index < 0 || index > this.size()) {
             console.log('invalid index')
+            return
         }
         let newNode = new Node(data)
         if (index === 0) {
@@ -64,6 +65,7 @@ class LinkList {
     removeAnyIndexNode(index) {
         if (index < 0 || index > this.size()) {
             console.log('invalid index')
+            return
         }
 
         if (index === 0) {
