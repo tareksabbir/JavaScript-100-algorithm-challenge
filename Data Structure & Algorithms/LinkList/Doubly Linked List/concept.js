@@ -39,6 +39,25 @@ class DoublyLinkedList {
             console.log('invalid index')
             return
         }
+        const newNode = new Node(data)
+        if (index === 0) {
+            newNode.next = this.head
+            if (this.head) {
+                this.head.prev = newNode
+            }
+            this.head = newNode
+        }
+        let current = this.head
+        for (let i = 0; i < index; i++) {
+            current = current.next
+        }
+        newNode.prev = current
+        newNode.next = current.next
+        if (current.next) {
+            current.next.prev = newNode
+        }
+        current.next = newNode
+
 
     }
 
