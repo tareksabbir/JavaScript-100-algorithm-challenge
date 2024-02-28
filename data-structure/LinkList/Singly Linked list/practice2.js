@@ -31,6 +31,7 @@ class LinkList {
     addToSpecificIndex(index, data) {
         if (index < 0 || index > this.size()) {
             console.log('invalid index')
+            return
         }
         const newNode = new Node(data)
         if (index === 0) {
@@ -71,6 +72,7 @@ class LinkList {
     removeFromAny(index) {
         if (index < 0 || index > this.size()) {
             console.log('invalid index')
+            return
         }
         if (index === 0) {
             this.head = this.head.next
