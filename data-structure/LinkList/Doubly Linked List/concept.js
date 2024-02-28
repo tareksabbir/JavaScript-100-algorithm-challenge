@@ -34,6 +34,23 @@ class DoublyLinkedList {
         newNode.prev = current
         current.next = newNode
     }
+    addAt(index, data) {
+        if (index < 0 || index > this.size()) {
+            console.log('invalid index')
+            return
+        }
+
+    }
+
+    size() {
+        let count = 0
+        let current = this.head
+        while (current) {
+            count++
+            current = current.next
+        }
+        return count
+    }
 
 
 }
