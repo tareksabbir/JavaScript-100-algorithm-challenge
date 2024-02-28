@@ -86,6 +86,32 @@ class DoublyLinkedList {
         current.prev.next = null
     }
 
+    removeAt(index) {
+        if (index < 0 || index > this.size()) {
+            console.log('invalid index')
+            return
+        }
+
+        if (index === 0) {
+            this.head = this.head.next
+            if (this.head) {
+                this.head.prev = null
+            }
+        }
+        let current = this.head
+        for (let i = 0; i < index - 1; i++) {
+            current = current.next
+        }
+
+        if (current.next) {
+            current.next = current.next.next
+            if (current.next) {
+                current.next.prev = current
+            }
+        }
+
+    }
+
     size() {
         let count = 0
         let current = this.head
