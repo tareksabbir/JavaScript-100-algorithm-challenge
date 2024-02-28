@@ -18,7 +18,7 @@ const containDuplicate = (arr) => {
 
 
 }
-console.log(containDuplicate([1, 2, 3, 4, 5, 1]))
+//console.log(containDuplicate([1, 2, 3, 4, 5, 1]))
 
 
 let a = ['a', 'b', 'c', 'd', 'b', 'c', 'd', 'e', 'f', 'a', 'b', 'c', 'd', 'b', 'c', 'd', 'e', 'f']
@@ -40,7 +40,7 @@ function useSetMethod(data) {
     let c = a.reduce((total, value) => total + value, 0)
     return a, c
 }
-//console.log(useSetMethod(b))
+console.log(useSetMethod(b))
 
 
 
