@@ -21,5 +21,19 @@ class DoublyLinkedList {
         }
         this.head = newNode
     }
+    addLast(data) {
+        const newNode = new Node(data)
+        if (!this.head) {
+            this.head = newNode
+            return
+        }
+        let current = this.head
+        while (current.next) {
+            current = current.next
+        }
+        newNode.prev = current
+        current.next = newNode
+    }
+
 
 }
