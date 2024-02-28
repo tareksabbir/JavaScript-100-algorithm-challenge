@@ -112,6 +112,16 @@ class DoublyLinkedList {
 
     }
 
+    print() {
+        let arr = []
+        let current = this.head
+        while (current) {
+            arr.push(current.data)
+            current = current.next
+        }
+        return arr
+    }
+
     size() {
         let count = 0
         let current = this.head
@@ -124,3 +134,32 @@ class DoublyLinkedList {
 
 
 }
+
+
+const dll = new DoublyLinkedList()
+
+
+dll.addToTheTop(30)
+dll.addToTheTop(20)
+dll.addToTheTop(10)
+console.log('add to the top :', dll.print())
+dll.addLast(40)
+dll.addLast(50)
+dll.addLast(60)
+console.log('add to the last:', dll.print())
+dll.removeFirst()
+dll.removeFirst()
+dll.removeFirst()
+console.log('remove top node:', dll.print())
+
+
+
+dll.addToTheTop(70)
+dll.addToTheTop(80)
+dll.addToTheTop(90)
+dll.removeLast()
+console.log('remove tail node:', dll.print())
+
+
+dll.removeAt(4)
+console.log('remove any node:', dll.print())
