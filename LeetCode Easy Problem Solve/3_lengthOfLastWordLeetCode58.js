@@ -25,19 +25,19 @@ Explanation: The last word is "joyboy" with length 6.
 
 // way 1 
 
-var lengthOfLastWord = function(s) {
+var lengthOfLastWord = function (s) {
     s = s.trim();
     let words = s.split(' ');
     return words[words.length - 1].length;
 };
 
-lengthOfLastWord2(" luffy is still joyboy ")
-
+console.log(lengthOfLastWord(" luffy is still joyboy    ")
+)
 
 //way 2
 var lengthOfLastWord2 = function (s) {
-    let str = s.split(" ").filter(item=>item!='')
-    return str[str.length-1].length
+    let str = s.split(" ").filter(item => item != '')
+    return str[str.length - 1].length
 
 
 };
