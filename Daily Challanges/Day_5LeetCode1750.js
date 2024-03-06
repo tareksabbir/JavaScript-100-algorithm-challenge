@@ -56,3 +56,15 @@ var minimumLength = function (s) {
 
 
 console.log(minimumLength(cabaabac))
+
+
+
+
+var minimumLength = function (s) {
+   
+   
+
+};
+
+
+console.log(minimumLength(cabaabac))
