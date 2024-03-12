@@ -9,7 +9,6 @@ var removeZeroSumSublists = function (head) {
     const prefixSums = { 0: dummy };
     let prefixSum = 0;
     let current = head;
-
     while (current) {
         prefixSum += current.val;
         if (prefixSum in prefixSums) {
