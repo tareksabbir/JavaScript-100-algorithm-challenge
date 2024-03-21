@@ -4,4 +4,14 @@ function numberReverse(num) {
 
 }
 
-console.log(numberReverse(89))
+//console.log(numberReverse(89))
+
+
+
+function num2(n) {
+    let number = n.toString().split("").reverse().join("")
+    console.log(parseInt(number) * Math.sign(n))
+
+}
+
+num2(-98)
