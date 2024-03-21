@@ -30,7 +30,7 @@ let b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 3, 4, 5, 6, 6, 7, 8, 9, 3]
 function useFilterMethod(data) {
     return data.filter((item, index) => data.indexOf(item) === index)// get duplicate  data.indexOf(item)!==index)
 }
-//console.log(useFilterMethod(a))
+console.log(useFilterMethod(a))
 
 
 // way3 unique array by sets
@@ -40,7 +40,7 @@ function useSetMethod(data) {
     let c = a.reduce((total, value) => total + value, 0)
     return a, c
 }
-console.log(useSetMethod(b))
+//console.log(useSetMethod(b))
 
 
 
