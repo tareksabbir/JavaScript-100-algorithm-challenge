@@ -73,5 +73,45 @@ var searchInsert3 = function (nums, target) {
 
 
 };
-console.log(searchInsert3([0, 1, 3, 5, 6], 7))
+//console.log(searchInsert3([0, 1, 3, 5, 6], 7))
 
+
+// brout force 
+function src(arr, target) {
+    if (arr.includes(target)) return arr.indexOf(target)
+    let sorting = arr.sort((a, b) => a - b)
+    for (let n of sorting) {
+        if (n > target) {
+            return sorting.indexOf(n) - 1
+        }
+    }
+    return sorting.length
+
+}
+
+//console.log(src([0, 1, 3, 5, 6], 7))
+
+
+function binary(array, target) {
+    let arr = array.sort((a, b) => a - b)
+    let l = 0
+    let r = arr.length - 1
+    while (l <= r) {
+        let mid = Math.floor((l + r) / 2)
+        if (arr[mid] == target) {
+            return mid
+        }
+        if (arr[mid] < target) {
+            l = mid + 1
+        }
+        else {
+            r = mid - 1
+        }
+
+    }
+    return l
+
+
+}
+
+console.log(binary([3, 6, 5, 4, 7], 5))
