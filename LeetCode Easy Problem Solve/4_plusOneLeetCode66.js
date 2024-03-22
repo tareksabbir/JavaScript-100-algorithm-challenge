@@ -29,11 +29,25 @@ Thus, the result should be [1,0].
  */
 
 
-var plusOne = function(digits) {
-    let str = Number(digits.join(""))+1
-    return str.split()
-     
-    
+var plusOne = function (digits) {
+    let arr = []
+    let str = (parseInt(digits.join("")) + 1).toString().split('')
+    str.map(v => {
+        arr.push(Number(v))
+    })
+    return arr
 };
 
-console.log(plusOne([4,3,2,1]))
+console.log(plusOne([4, 3, 2, 1]))
+
+
+// var plusOne2 = function(digits) {
+//     let str = (parseInt(digits.join(""))+1).toString().split('')
+//     for(let n of str){
+//         digits.split()
+//     }
+//     return digits
+
+// };
+
+// console.log(plusOne2([4,3,2,1]))
