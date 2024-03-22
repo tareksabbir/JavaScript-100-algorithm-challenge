@@ -97,8 +97,24 @@ const conceptClear = (string) => {
         }
     }
     return stack.length === 0
-
-
 }
 
 console.log(conceptClear("([[{}]{({[)]})}])"))
+
+
+function stacks(string) {
+    let stack = []
+    let brackets = { '(': ')', '{': '}', '[': ']' }
+    for (let n of string) {
+        if (brackets[n]) {
+            stack.push(n)
+        } else {
+            if (brackets[stack.pop()] !== n) {
+                return false
+            }
+        }
+    }
+    return stack.length === 0
+}
+
+stacks('()[]')
