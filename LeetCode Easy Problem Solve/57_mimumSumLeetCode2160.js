@@ -26,3 +26,10 @@ minimumSumOfFourDigit(4004)
 
 
 
+function minimum(num) {
+    let min = num.toString().split("").sort((a, b) => a - b)
+    return parseInt(min[0] + min[2]) + parseInt(min[1] + min[3])
+
+}
+
+console.log("new:", minimum(2932))
