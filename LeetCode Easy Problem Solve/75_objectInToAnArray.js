@@ -1,7 +1,7 @@
 // function that converts an object into an array where each element represented a key-value pair from an array of object 
 
 function objectToAnArray(obj) {
-    // let array = Array.from(Object.entries(obj))
+    let array = Array.from(Object.entries(obj))
     // console.log(array)
 
     console.log( Object.entries(obj))
