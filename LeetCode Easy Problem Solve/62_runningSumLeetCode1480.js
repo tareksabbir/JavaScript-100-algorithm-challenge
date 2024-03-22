@@ -26,7 +26,7 @@ var runningSum = function (nums) {
     for (let i = 0; i < nums.length; i++) {
         arr.push(sum += nums[i])
     }
-  
+
     return arr
 
 
@@ -38,12 +38,25 @@ var runningSum = function (nums) {
 var runningSum2 = function (nums) {
     let arr = []
     let sum = 0
-    for(let n of nums){
-        arr.push(sum+=n)
+    for (let n of nums) {
+        arr.push(sum += n)
     }
     return arr
 
 
 };
 
-console.log(runningSum2([3,1,2,10,1]))
+console.log(runningSum2([3, 1, 2, 10, 1]))
+
+
+
+function run(arr) {
+    let r = []
+    sum = 0
+    for (let n of arr) {
+        r.push(sum += n)
+    }
+    return arr = r
+}
+
+console.log(run([3, 1, 2, 10, 1]))
