@@ -38,7 +38,7 @@ var removeElement = function(nums, val) {
     for(var i=0;i<a.length;i++){
         nums[i]=a[i]
     }
-    console.log(a)
+    //console.log(a)
 
 };
 
@@ -65,15 +65,17 @@ var removeElement2 = function(nums, val) {
 
     for(let i = nums.length ; i>=0;i-- ){
         if(nums[i]===val){
-            nums.splice(i,1,)
+            nums.splice(i,1)
             
         }
     }
-    return nums.length
+    console.log(nums.length)
     
 };
 
 removeElement2([0,1,2,2,3,0,4,2],2)
+
+
 
 
 
