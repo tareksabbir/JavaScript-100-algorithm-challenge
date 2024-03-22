@@ -14,7 +14,7 @@ var addBinary = function (a, b) {
     return (s1 + s2).toString(2)
 };
 
-addBinary(9, 9)
+//addBinary(9, 9)
 
 
 
