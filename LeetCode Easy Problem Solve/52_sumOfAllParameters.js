@@ -4,7 +4,7 @@
 
 // way one 
 function sumOfAllParams(...params) {
-    return params.reduce((total, value) => total + value,0)
+    return params.reduce((total, value) => total + value, 0)
 }
 
 let result = sumOfAllParams(1, 2, 3, 4, 5, 6)
@@ -32,8 +32,15 @@ function sumOfAllParams3(...params) {
     params.forEach((value) => {
         sumSoFar += value
     })
-    console.log('way three: ',sumSoFar)
+    console.log('way three: ', sumSoFar)
 
 }
 
-sumOfAllParams3(100,200,300)
+sumOfAllParams3(100, 200, 300)
+
+
+function sums(...rest) {
+    console.log(rest.reduce((total, value) => total + value,0))
+}
+
+sums(100, 200, 300)
