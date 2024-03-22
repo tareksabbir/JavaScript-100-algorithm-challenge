@@ -30,7 +30,6 @@ function addBorder(pictures) {
 
     }
     console.log(pictures)
-
 }
 
 
