@@ -55,3 +55,6 @@ var smallerNumbersThanCurrent2 = function (nums) {
 
 
 smallerNumbersThanCurrent2([7, 7, 7, 7])
+
+
+
