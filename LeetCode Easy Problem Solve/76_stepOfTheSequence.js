@@ -17,4 +17,4 @@ function stepOfTheSequence(step) {
     console.log(box)
 }
 
-stepOfTheSequence(2)
+stepOfTheSequence(5)
