@@ -32,3 +32,15 @@ function replacedArrayWay2(inputArray, replaceValue, subtractionValue) {
 
 replacedArrayWay2([1, 2, 1], 1, 3)
 
+
+function replaceAll(arr, target, replacedValue) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === target) {
+            arr[i] = replacedValue
+        }
+    }
+    return arr
+
+}
+console.log(replaceAll([1, 2, 1], 1, 3))
+
