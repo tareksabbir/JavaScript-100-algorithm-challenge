@@ -43,6 +43,7 @@ Explanation: It is better not to apply any change.
 
 var maximum69Number2 = function (num) {
     let arr = Array.from(num.toString(), (n) => parseInt(n))
+    
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] === 6) {
             arr[i] = 9
@@ -50,10 +51,24 @@ var maximum69Number2 = function (num) {
         }
     }
     return Number(arr.join(''))
-
+    
 };
 
 let result2 = maximum69Number2(66969)
 
-console.log(result2)
+//console.log(result2)
 
+
+
+function practice(num){
+    let arr = Array.from(num.toString(),(n)=>parseInt(n))
+    for(let i =0;i<arr.length;i++){
+        if(arr[i]===6){
+            arr[i]=9
+            return Number(arr.join(""))
+        }
+    }
+    return Number(arr.join())
+
+}
+console.log(practice(9699))
