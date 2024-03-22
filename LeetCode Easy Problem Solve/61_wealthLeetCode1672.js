@@ -44,7 +44,7 @@ function maximumWealth(accounts) {
 
 }
 
-console.log(maximumWealth([[2, 8, 7], [7, 1, 3], [1, 9, 5]]))
+//console.log(maximumWealth([[2, 8, 7], [7, 1, 3], [1, 9, 5]]))
 
 
 /// approach 2 
@@ -59,7 +59,7 @@ function maximumWealth2(accounts) {
         rich.push(sum)
 
     }
-    
+
     if (Math.max(...rich) === Math.min(...rich)) {
         return Math.max(...rich)
     } else {
@@ -70,3 +70,14 @@ function maximumWealth2(accounts) {
 }
 
 maximumWealth2([[2, 8, 7], [7, 1, 3], [1, 9, 5]])
+
+
+function wealth(arr) {
+    let result = []
+    for (let n of arr) {
+        result.push(n.reduce((total, value) => total + value, 0))
+    }
+    console.log(Math.max(...result))
+}
+
+wealth([[1,5],[7,3],[3,5]])
