@@ -27,18 +27,15 @@ var createTargetArray = function (nums, index) {
     let target = []
     for (let i = 0; i < nums.length; i++) {
         target.splice(index[i], 0, nums[i])
-
     }
-    console.log(nums)
-
-
+    return target
 };
 
 
-createTargetArray([0, 1, 2, 3, 4], [0, 1, 2, 2, 1])
+console.log(createTargetArray([0, 1, 2, 3, 4], [0, 1, 2, 2, 1]))
 
 
-let a = [0, 1, 2, 3, 4]
-console.log(a.splice(2, 0, 8))
-console.log(a)
+// let a = [0, 1, 2, 3, 4]
+// console.log(a.splice(2, 0, 8))
+// console.log(a)
 
