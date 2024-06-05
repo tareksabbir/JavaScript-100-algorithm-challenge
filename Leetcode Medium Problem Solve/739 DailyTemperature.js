@@ -10,7 +10,7 @@ let dailyTemperature =(temp)=>{
         }
         stack.push(i)
     }
-    console.log(ans)
+    return ans
 
 }
 dailyTemperature([72,73,71,69,68,75,76,90])
