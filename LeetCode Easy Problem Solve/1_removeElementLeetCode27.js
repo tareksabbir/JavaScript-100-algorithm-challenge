@@ -28,36 +28,7 @@ If all assertions pass, then your solution will be accepted.
  */
 
 //way one
-var removeElement = function(nums, val) {
-    var a=[]
-    for(var i=0;i<nums.length;i++){
-        if(nums[i]!=val){
-            a.push(nums[i])
-        }
-    }
-    for(var i=0;i<a.length;i++){
-        nums[i]=a[i]
-    }
-    //console.log(a)
-
-};
-
-removeElement([0,1,2,2,3,0,4,2],2)
-
-//Way 2
-
-var removeElement2 = function(nums, val) {
-    let index = 0 
-    for(let i = 0 ; i<nums.length;i++ ){
-        if(nums[i]!==val){
-            nums[index]=nums[i]
-            index++
-        }
-    }
-    return index
-};
-
-removeElement2([0,1,2,2,3,0,4,2],2)
+ 
 
 // way 3 
 
