@@ -28,3 +28,4 @@ var threeConsecutiveOdds2 = function(arr) {
     return false;
     
 };
+
