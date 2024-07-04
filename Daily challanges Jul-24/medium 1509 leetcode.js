@@ -9,7 +9,7 @@ let minimumDifference = (nums) => {
     result.push(arr[n-3]-arr[1])
     result.push(arr[n-2]-arr[2])
     result.push(arr[n-1]-arr[3])
-    return Math.max(...result)
+    return Math.min(...result)
 
 }
 
