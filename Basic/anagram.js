@@ -18,17 +18,16 @@ function countChar(str){
     console.log(map)
 }
 
-countChar("aabbeemmw")
 
-// function anagram(str1, str2) {
-//     if (str1.length !== str2.length) return false
-//     let s1 = countChar(str1)
-//     let s2 = countChar(str2)
-//     for (let n of s1) {
-//         if (s1[n] !== s2[n]) return false
-//     }
-//     return true
-// }
+function anagram(str1, str2) {
+    if (str1.length !== str2.length) return false
+    let s1 = countChar(str1)
+    let s2 = countChar(str2)
+    for (let n of s1) {
+        if (s1[n] !== s2[n]) return false
+    }
+    return true
+}
 
 
 //console.log(anagram("carrace", "racecar"))
