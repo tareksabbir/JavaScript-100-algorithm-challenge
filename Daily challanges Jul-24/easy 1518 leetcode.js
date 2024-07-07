@@ -20,5 +20,7 @@ var numWaterBottles2 = function (numBottles, numExchange) {
         numBottles = Math.floor(numBottles / numExchange) + (numBottles % numExchange);
     }
 
-    return totalBottles;
+console.log(totalBottles)
 };
+
+numWaterBottles2 (15,4)
