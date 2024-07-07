@@ -18,7 +18,7 @@ function fibo2(n) {
     console.log(arr[n])
 }
 
-fibo2(10)
+fibo2(10)        
 
 
 function fibo3(n) {
