@@ -24,3 +24,14 @@ console.log(totalBottles)
 };
 
 numWaterBottles2 (15,4)
+
+
+
+function numOfBottle (num,ex){
+    let ans =num
+    while(num>=ex){
+        let ans= ans + Math.floor(num/ex)
+        num = Math.floor(num/ex)+(num%ex)
+    }
+
+}
