@@ -8,3 +8,9 @@ function palindromeNumber(num){
 
 }
 palindromeNumber(123321)
+
+
+const palindrome2 =(str)=>{
+    console.log(str.split("").reverse().join('') ===str)
+}
+palindrome2("abbaa")
