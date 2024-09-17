@@ -1,4 +1,4 @@
-const payment = false
+const payment = true
 
 const newCourse = new Promise((resolve, reject) => {
     if (!payment) {
