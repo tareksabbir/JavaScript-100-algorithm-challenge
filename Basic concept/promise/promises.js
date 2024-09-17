@@ -21,5 +21,5 @@ newCourse
         return console.log(JSON.stringify(courseDetails))
     })
     .catch((err) => {
-        return console.log(err)
+        return console.log("From reject :",err)
     })
