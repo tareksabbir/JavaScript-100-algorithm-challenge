@@ -17,6 +17,7 @@ const newCourse = new Promise((resolve, reject) => {
 })
 
 newCourse
+
     .then((courseDetails) => {
         return console.log(JSON.stringify(courseDetails))
     })
