@@ -11,8 +11,7 @@ var hIndex = function(citations) {
             h = i + 1; 
         } else {
             break;
-        }
-        
+        } 
     }
     
     return h;
